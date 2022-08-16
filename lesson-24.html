@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 24</title>
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+
+    .purple-bg {
+        background-color: blueviolet;
+    }
+</style>
+
+<body>
+
+
+    <h2 class="hello">Hello world</h2>
+    <p id="source">
+        <style>
+            #source {
+                color: red;
+            }
+
+            #text {
+                text-transform: uppercase;
+            }
+        </style>
+        <span id=text>Take a look at<br>how this text<br>is interpreted
+            below.</span>
+        <span style="display:none">HIDDEN TEXT</span>
+    </p>
+    <p id="para-graph">Lorem ipsum dolor, <span>sit amet</span> consectetur adipisicing elit. <span>Error
+            molestias</span>, quis nisi reiciendis
+        vero autem eum
+        optio hic qui atque.</p>
+    <h3 class="hello-two">Hello 2</h3>
+
+    <ul class="ul-list">
+        <li>Ami Dipto</li>
+        <li id="chingam" class="color-changes hidden">Ami Dipto Dey</li>
+        <li class="color-change">Ami Dipto Dey Rudro</li>
+    </ul>
+
+    <button id="btn">Change Things</button>
+
+    <script>
+        const heading = document.querySelector('#source');
+        // console.log(typeof heading);
+        // console.log(heading.textContent);
+
+        // heading.innerText = " ami nai"
+
+        const lis = document.getElementsByClassName("color-change")
+
+        const name = document.querySelector("#chingam")
+        console.log(name.innerHTML);
+
+
+        const ulList = document.getElementsByClassName('ul-list')
+        console.log(ulList[0].textContent)
+
+        document.getElementById("btn").addEventListener("click", () => {
+            heading.textContent = "by world"
+            heading.style.backgroundColor = "Red"
+            for (const li of lis) {
+                li.style.color = "green"
+            }
+            name.classList.remove("hidden")
+            name.classList.add("purple-bg")
+            name.setAttribute('title', 'tooltip added from javaScript')
+        })
+    </script>
+</body>
+
+</html>

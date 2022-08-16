@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Bank</title>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(247, 246, 244);
+    }
+</style>
+
+<body>
+    <div class="container w-[90%] mx-auto h-full relative">
+        <div class="flex w-full h-screen items-center justify-center">
+            <div class="">
+                <h2 class="text-[40px] text-center font-bold text-stone-600">Welcome to my <span
+                        class="text-orange-600">
+                        bank</span>
+                </h2>
+                <div class="grid grid-cols-3 gap-4 w-full mt-10">
+                    <div class="deposite bg-blue-700 pl-4 py-4 rounded">
+                        <h4 class="text-white text-xl">Deposite</h4>
+                        <h5 class="text-white">$<span id="deposite-money">00</span></h5>
+                    </div>
+                    <div class="withdraw bg-green-600 pl-4 py-4 rounded">
+                        <h4 class="text-white text-xl">Withdraw</h4>
+                        <h5 class="text-white">$<span id="withdraw-money">00</span></h5>
+                    </div>
+                    <div class="balance bg-purple-600 pl-4 py-4 rounded">
+                        <h4 class="text-white text-xl">Balance</h4>
+                        <h5 class="text-white">$<span id="balance-money">1240</span></h5>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 mt-10">
+                    <div class="bg-yellow-500 pl-6 py-4 rounded">
+                        <h2 class="text-white">Money, You want to Deposite</h2>
+                        <input id="deposite-input" type="text"
+                            class="bg-white outline-none mt-2 py-1 pl-3 w-[80%] placeholder:text-xs"
+                            placeholder="$Amount you want to deposite">
+                        <button id="deposite-btn"
+                            class="text-sm mt-3 px-4 py-1 bg-blue-500 text-white rounded">Deposite</button>
+                    </div>
+                    <div class="bg-indigo-700 pl-6 py-4 rounded">
+                        <h2 class="text-white">Money, You want to withdraw</h2>
+                        <input type="text" class="bg-white outline-none mt-2 py-1 pl-3 w-[80%] placeholder:text-xs"
+                            placeholder="$Amount you want to withdraw">
+                        <button class="text-sm mt-3 px-4 py-1 bg-blue-500 text-white rounded">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bank.js"></script>
+</body>
+
+</html>

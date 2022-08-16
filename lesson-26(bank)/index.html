@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(247, 246, 244);
+    }
+</style>
+
+<body>
+    <div id="form-authentication" class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <h2 class="text-center text-4xl font-bold text-green-700">Welcome <br> To My Bank</h2>
+        <div class="login-from w-[70%] bg-zinc-200 mx-auto p-8 mt-16 rounded">
+            <div class="">
+                <label for="user-email">
+                    <span>Email</span> <br>
+                    <input type="email" name="user-email" id="user-email"
+                        class="bg-white mt-2 outline-none px-3 py-2 text-sm text-state-100 text-gray-500 w-[90%]"
+                        placeholder="mail@gmail.com">
+                </label> <br> <br>
+
+                <label for="user-password">
+                    <span>Password</span> <br>
+                    <input type="password" name="user-password" id="user-password"
+                        class="bg-white mt-2 outline-none px-3 py-2 text-sm text-state-100 text-gray-500 w-[90%]"
+                        placeholder="********">
+                </label>
+            </div>
+            <p id="error-msg" class="text-center text-xs text-end w-[90%] opacity-0 text-red-800">You are entering
+                wrong email or
+                password</p>
+            <button id="submit-btn" class="bg-sky-600 text-white px-5 py-2 mt-3 text-sm rounded">Submit</button>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
