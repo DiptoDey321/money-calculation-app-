@@ -51,13 +51,28 @@
                     </div>
                     <div class="bg-indigo-700 pl-6 py-4 rounded">
                         <h2 class="text-white">Money, You want to withdraw</h2>
-                        <input type="text" class="bg-white outline-none mt-2 py-1 pl-3 w-[80%] placeholder:text-xs"
+                        <input id="withdraw_value" type="text"
+                            class="bg-white outline-none mt-2 py-1 pl-3 w-[80%] placeholder:text-xs"
                             placeholder="$Amount you want to withdraw">
-                        <button class="text-sm mt-3 px-4 py-1 bg-blue-500 text-white rounded">Withdraw</button>
+                        <button id="withDraw-btn"
+                            class="text-sm mt-3 px-4 py-1 bg-blue-500 text-white rounded">Withdraw</button>
                     </div>
+
                 </div>
+                <p id="error-msg" class="text-end text-xs text-red-800 opacity-0">Withdraw is more than Balance</p>
             </div>
         </div>
+    </div>
+
+    <div class="text-center pb-10">
+        <h3 class="text-xl">Price - $<span id="amonut">180</span> </h3>
+        <p class="text-[10px]">Type DOM to get 30% discount </p>
+        <div class="mt-5">
+            <input id="discount-fleid" type="text" class="bg-red-50 border border-gray-200 h-9 outline-none pl-10">
+            <button id="get-discount" class="ml-5 px-3 py-2 text-xs bg-gray-400 text-white rounded">Get
+                Discount</button>
+        </div>
+
     </div>
 
 
